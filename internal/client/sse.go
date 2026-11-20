@@ -21,7 +21,7 @@ import (
 
 // Bound unfinished events as well as the retained transcript. A peer that
 // never sends a blank line must not grow the parser without limit.
-const maxSSEEventBytes = 1 << 20
+const maxSSEEventBytes = 32 << 20
 
 // receiveSSE retains the decoded wire body for export and completed events
 // for inspection. Stopping keeps both; reconnecting is always a new send, so
